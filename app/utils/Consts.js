@@ -1,6 +1,6 @@
 import {moderateScale, scale, verticalScale} from '../utils/scalingUtils';
 
-export const BASE_API_URL = 'https://slnapipbl6-production.up.railway.app';
+export const BASE_API_URL = 'https://bemobile-production.up.railway.app';
 export const API_KEY = 'S4R13E7?J5bjp7{!CZMADnGwhC8FGZZ2p5MBH0qk';
 
 export const BORDER_RADIUS_INPUT = scale(1);

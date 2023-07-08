@@ -72,10 +72,12 @@ const ProductDetailScreen = props => {
           } else {
             setListImgDescription(listSlide);
             // setLocal(true);
+            console.log(listSlide);
           }
         } else {
           setListImgDescription(listSlide);
           // setLocal(true);
+            console.log(listSlide);
         }
         showLoading(false);
       }
@@ -120,6 +122,8 @@ const ProductDetailScreen = props => {
         data: {
           productId: item?.id,
           quantity: 1,
+          sizeId: 2,
+          colorId: 2
         },
         onSuccess: () => {
           showLoading(false);
@@ -266,8 +270,8 @@ const ProductDetailScreen = props => {
               !local
                 ? {
                     uri: Utils.formatImageUrl(
-                      listImgDescription?.[indexImage] || '',
-                    ),
+                      listImgDescription?.[indexImage]
+                    )
                   }
                 : listImgDescription?.[indexImage]
             }
@@ -356,6 +360,7 @@ const ProductDetailScreen = props => {
             </Text>
           </View>
         </View>
+        
         {detailProduct.length ? (
           <View style={[styles.specification]}>
             <Text
@@ -366,7 +371,7 @@ const ProductDetailScreen = props => {
                 textTransform: 'uppercase',
               }}>
               {' '}
-              Thông số kỹ thuật
+              Chi tiết sản phẩm
             </Text>
             {detailProduct?.map((_item, index) => {
               return (
